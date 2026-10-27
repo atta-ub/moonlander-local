@@ -1,0 +1,20 @@
+#+TITLE: ZSA Moonlander keymap (local QMK)
+
+The same layout as the Voyager: see [[file:../voyager-local/layout.org][../voyager-local/layout.org]].
+Change both keymaps together. Moonlander extras are off: the 3-key inner
+columns, the 5-key bottom row, the red thumb keys and the innermost thumb keys.
+Outer thumb keys = Space/FN and Enter; middle thumb keys = ↓/NUM and ↑/NUM.
+
+* Configure
+- Keys and layers: =keymap.c= (=LAYOUT_moonlander=, 72 keys per layer).
+- Timing, misfire guards, features: =config.h=, =rules.mk= (same as the Voyager).
+
+* Flash
+Uses ZSA's QMK fork in =../qmk-zsa=, where
+=keyboards/zsa/moonlander/keymaps/local= links to this folder. Board is rev A.
+#+begin_src sh
+cd /var/projects/atlas-iade/dev/zsa/qmk-zsa
+qmk flash -kb zsa/moonlander/reva -km local
+#+end_src
+When it waits for the bootloader, hold Space and press the top-right key
+(QK_BOOT), or press the reset button on the Moonlander.
