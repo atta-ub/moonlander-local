@@ -11,6 +11,7 @@
 // Off on all layers: the 3-key inner columns, the 5-key bottom row, the red
 // thumb keys and the innermost thumb keys. Outer thumb keys = Space/FN and
 // Enter, middle thumb keys = Down/Up with the number layer.
+// Enter: tap = Enter, hold = Meta (xmonad mod), next to Meta on A and O.
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
@@ -19,7 +20,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_BSPC,        MT(MOD_LGUI, KC_A),MT(MOD_LSFT, KC_R),MT(MOD_LALT, KC_S),MT(MOD_LCTL, KC_T),KC_G,     KC_NO,                                          KC_NO,          KC_M,           MT(MOD_RCTL, KC_N),MT(MOD_LALT, KC_E),MT(MOD_RSFT, KC_I),MT(MOD_RGUI, KC_O),KC_QUOTE,
     KC_LEFT,        KC_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                                                           KC_K,           KC_H,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_RIGHT,
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
-    LT(2, KC_SPACE),LT(1, KC_DOWN), KC_NO,                                                                                                          KC_NO,          LT(1, KC_UP),   KC_ENTER
+    LT(2, KC_SPACE),LT(1, KC_DOWN), KC_NO,                                                                                                          KC_NO,          LT(1, KC_UP),   MT(MOD_RGUI, KC_ENTER)
   ),
   [1] = LAYOUT_moonlander(
     KC_NO,          KC_NO,          KC_BSLS,        KC_EXLM,        KC_TILD,        KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_COLN,        KC_PIPE,        KC_NO,          KC_NO,

@@ -3,7 +3,7 @@
 The same layout as the Voyager: see [[file:../voyager-local/layout.org][../voyager-local/layout.org]].
 Change both keymaps together. Moonlander extras are off: the 3-key inner
 columns, the 5-key bottom row, the red thumb keys and the innermost thumb keys.
-Outer thumb keys = Space/FN and Enter; middle thumb keys = ↓/NUM and ↑/NUM.
+Outer thumb keys = Space/FN and Enter/Meta; middle thumb keys = ↓/NUM and ↑/NUM.
 
 * Configure
 - Keys and layers: =keymap.c= (=LAYOUT_moonlander=, 72 keys per layer).
