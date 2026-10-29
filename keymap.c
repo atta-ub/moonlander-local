@@ -11,13 +11,13 @@
 // Off on all layers: the 3-key inner columns, the 5-key bottom row, the red
 // thumb keys and the innermost thumb keys. Outer thumb keys = Space/FN and
 // Enter, middle thumb keys = Down/Up with the number layer.
-// Enter: tap = Enter, hold = Meta (xmonad mod), next to Meta on A and O.
+// Enter: tap = Enter, hold = Meta (xmonad mod), next to Meta on G and M.
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
     KC_ESCAPE,      KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_NO,                                          KC_NO,          KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           CW_TOGG,
     KC_TAB,         KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,           KC_NO,                                          KC_NO,          KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        KC_DELETE,
-    KC_BSPC,        MT(MOD_LGUI, KC_A),MT(MOD_LSFT, KC_R),MT(MOD_LALT, KC_S),MT(MOD_LCTL, KC_T),KC_G,     KC_NO,                                          KC_NO,          KC_M,           MT(MOD_RCTL, KC_N),MT(MOD_LALT, KC_E),MT(MOD_RSFT, KC_I),MT(MOD_RGUI, KC_O),KC_QUOTE,
+    KC_BSPC,        KC_A,           MT(MOD_LSFT, KC_R),MT(MOD_LALT, KC_S),MT(MOD_LCTL, KC_T),MT(MOD_LGUI, KC_G),   KC_NO,                                          KC_NO,          MT(MOD_RGUI, KC_M),MT(MOD_RCTL, KC_N),MT(MOD_LALT, KC_E),MT(MOD_RSFT, KC_I),KC_O,           KC_QUOTE,
     KC_LEFT,        KC_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                                                           KC_K,           KC_H,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_RIGHT,
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
     LT(2, KC_SPACE),LT(1, KC_DOWN), KC_NO,                                                                                                          KC_NO,          LT(1, KC_UP),   MT(MOD_RGUI, KC_ENTER)
@@ -51,13 +51,11 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM = LAYOUT_moonla
   '*', '*', '*',                                              '*', '*', '*'
 );
 
-// Pinky and ring mods (A R I O) need a longer hold.
+// Pinky and ring mods (R I) need a longer hold.
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case MT(MOD_LGUI, KC_A):
     case MT(MOD_LSFT, KC_R):
     case MT(MOD_RSFT, KC_I):
-    case MT(MOD_RGUI, KC_O):
       return TAPPING_TERM + 50;
   }
   return TAPPING_TERM;

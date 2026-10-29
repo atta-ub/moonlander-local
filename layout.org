@@ -12,14 +12,14 @@ the 5-key bottom row, the red thumb keys and the innermost thumb keys.
 row 0    Esc    1      2      3      4      5      ✗    │ ✗     6      7      8      9      0      CapsWord
 row 1    Tab    Q      W      F      P      B      ✗    │ ✗     J      L      U      Y      ;      Del
 row 2    Bksp   A      R      S      T      G      ✗    │ ✗     M      N      E      I      O      '
-  (held)        Meta   Shift  Alt    Ctrl               │                     Ctrl   Alt    Shift  Meta
+  (held)               Shift  Alt    Ctrl   Meta        │       Meta   Ctrl   Alt    Shift
 row 3    ←      Z      X      C      D      V           │       K      H      ,      .      /      →
 row 4    ✗      ✗      ✗      ✗      ✗                  │              ✗      ✗      ✗      ✗      ✗
 
 thumbs   red: ✗                                         │ red: ✗
          outer: Space / FN   middle: ↓ / NUM   inner: ✗ │ inner: ✗   middle: ↑ / NUM   outer: Enter / Meta
 #+end_example
-Meta (xmonad mod) is in three places: hold A, hold O, or hold Enter.
+Meta (xmonad mod) is in three places: hold G, hold M, or hold Enter.
 
 * Layer 1: numbers and symbols (hold either middle thumb key)
 #+begin_example
@@ -49,7 +49,7 @@ thumbs   red: ✗                                         │ red: ✗
 Media keys need the xmonad bindings in =dotfiles/desktop/wm/xmonad.org=.
 
 * Timing (same as the Voyager)
-- Home row mods: 200 ms hold, 250 ms on A R I O (pinky, ring).
+- Home row mods: 200 ms hold, 250 ms on R I (ring).
 - Chordal hold: a same-hand key while holding = tap; outer columns and all
   thumb keys are exempt (T + Backspace = Ctrl+Backspace).
 - Flow tap: a home row key within 150 ms of a letter or Space = tap.
