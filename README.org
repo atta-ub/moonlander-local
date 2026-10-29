@@ -1,6 +1,7 @@
 #+TITLE: ZSA Moonlander keymap (local QMK)
 
-The same layout as the Voyager: see [[file:../voyager-local/layout.org][../voyager-local/layout.org]].
+Layer overview: [[file:layout.org][layout.org]]. The same layout as the Voyager
+([[file:../voyager-local/layout.org][../voyager-local/layout.org]]).
 Change both keymaps together. Moonlander extras are off: the 3-key inner
 columns, the 5-key bottom row, the red thumb keys and the innermost thumb keys.
 Outer thumb keys = Space/FN and Enter/Meta; middle thumb keys = ↓/NUM and ↑/NUM.

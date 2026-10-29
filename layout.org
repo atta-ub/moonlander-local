@@ -1,0 +1,58 @@
+#+TITLE: Moonlander layout overview
+#+DATE: 2026-10-28
+
+Keep this in sync with =keymap.c=. =✗= = disabled key (=KC_NO=).
+Same layers as the Voyager (=../voyager-local/layout.org=); the extra
+Moonlander keys are off on every layer: the 3-key inner columns (=xtra=),
+the 5-key bottom row, the red thumb keys and the innermost thumb keys.
+
+* Layer 0: base (Colemak-DH)
+#+begin_example
+         outer  pinky  ring   middle index  inner  xtra │ xtra  inner  index  middle ring   pinky  outer
+row 0    Esc    1      2      3      4      5      ✗    │ ✗     6      7      8      9      0      CapsWord
+row 1    Tab    Q      W      F      P      B      ✗    │ ✗     J      L      U      Y      ;      Del
+row 2    Bksp   A      R      S      T      G      ✗    │ ✗     M      N      E      I      O      '
+  (held)        Meta   Shift  Alt    Ctrl               │                     Ctrl   Alt    Shift  Meta
+row 3    ←      Z      X      C      D      V           │       K      H      ,      .      /      →
+row 4    ✗      ✗      ✗      ✗      ✗                  │              ✗      ✗      ✗      ✗      ✗
+
+thumbs   red: ✗                                         │ red: ✗
+         outer: Space / FN   middle: ↓ / NUM   inner: ✗ │ inner: ✗   middle: ↑ / NUM   outer: Enter / Meta
+#+end_example
+Meta (xmonad mod) is in three places: hold A, hold O, or hold Enter.
+
+* Layer 1: numbers and symbols (hold either middle thumb key)
+#+begin_example
+         outer  pinky  ring   middle index  inner  xtra │ xtra  inner  index  middle ring   pinky  outer
+row 0    ✗      ✗      \      !      ~      ✗      ✗    │ ✗     ✗      ✗      :      |      ✗      ✗
+row 1    -      _      [      {      (      <      ✗    │ ✗     >      )      }      ]      ;      "
+row 2    =      1      2      3      4      5      ✗    │ ✗     6      7      8      9      0      '
+row 3    +      *      @      #      $      %           │       ^      &      ,      .      /      `
+row 4    ✗      ✗      ✗      ✗      ✗                  │              ✗      ✗      ✗      ✗      ✗
+
+thumbs   red: ✗                                         │ red: ✗
+         outer: Space   middle: [held]   inner: ✗       │ inner: ✗   middle: [held]   outer: Enter
+#+end_example
+
+* Layer 2: FN (hold Space, solid green)
+#+begin_example
+         outer  pinky  ring   middle index  inner  xtra │ xtra  inner  index  middle ring   pinky  outer
+row 0    ✗      ✗      ✗      ✗      ✗      ✗      ✗    │ ✗     ✗      ✗      ✗      ✗      ✗      BOOT
+row 1    ✗      ←      ↓      ↑      →      ✗      ✗    │ ✗     ✗      ✗      F11    F12    ✗      ✗
+row 2    ✗      F1     F2     F3     F4     F5     ✗    │ ✗     F6     F7     F8     F9     F10    ✗
+row 3    ✗      Home   PgDn   PgUp   End    ✗           │       Mute   Vol-   Vol+   Prev   Play   Next
+row 4    ✗      ✗      ✗      ✗      ✗                  │              ✗      ✗      ✗      ✗      ✗
+
+thumbs   red: ✗                                         │ red: ✗
+         outer: [held]   middle: ✗   inner: ✗           │ inner: ✗   middle: ✗   outer: ✗
+#+end_example
+Media keys need the xmonad bindings in =dotfiles/desktop/wm/xmonad.org=.
+
+* Timing (same as the Voyager)
+- Home row mods: 200 ms hold, 250 ms on A R I O (pinky, ring).
+- Chordal hold: a same-hand key while holding = tap; outer columns and all
+  thumb keys are exempt (T + Backspace = Ctrl+Backspace).
+- Flow tap: a home row key within 150 ms of a letter or Space = tap.
+- Space: time only (no permissive hold), like kanata's Space layer on the laptop.
+- Enter / Meta: 200 ms hold, permissive hold, no flow tap, so Meta works
+  right after typing.
