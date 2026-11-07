@@ -4,15 +4,15 @@ Layer overview: [[file:layout.org][layout.org]]. The same layout as the Voyager
 ([[file:../voyager-local/layout.org][../voyager-local/layout.org]]).
 Change both keymaps together. Moonlander extras are off: the 3-key inner
 columns, the 5-key bottom row, the red thumb keys and the innermost thumb keys.
-Outer thumb keys = Space/FN and Enter/Meta; middle thumb keys = ↓/NUM and ↑/NUM.
+Outer thumb keys = Space/FN and Enter/Meta; middle thumb keys = Repeat/NUM and Backspace/NUM.
 
 * Configure
 - Keys and layers: =keymap.c= (=LAYOUT_moonlander=, 72 keys per layer).
 - Timing, misfire guards, features: =config.h=, =rules.mk= (same as the Voyager).
 - LEDs: =keymap.c=, the same code as the Voyager. Colours are
   {hue, saturation, brightness}, 0-255; the board brightness keys scale them all.
-  - Layer colours: =layer_colors=.
-  - Key highlights (mods, groups, Caps Word, boot, unused): =kind_colors=.
+  - All colours: the =themes= table (5 themes: layer colours + key highlights).
+  - Bright/Dim levels: =BRIGHT_VAL=, =DIM_PERCENT=.
   - Thumb layer keys: =LAYER_TAP_VAL= (their colour is the target layer's).
   - Which key gets which colour is worked out from the keymap at start-up, so
     moving a key moves its colour. What each colour means: =layout.org=, LEDs.
